@@ -1,0 +1,14 @@
+duration = 8
+start time = -1
+position start: 0 0 -30
+position time = 2: x = 30 z = 0
+position time = 4: x = 0 z = 30
+position time = 6: x = -30 z = 0
+position time = 8: x = 0 z = -30
+rotation start: 0 180 0
+rotation time = 2: x = 0 y = 90 z = 0
+rotation time = 4: x = 0 y = 0
+rotation time = 6: x = 0 y = 270
+rotation time = 8: x = 0 y = 180
+
+

@@ -1,0 +1,8 @@
+{
+"fragment": "uniform float time;\nvarying vec2 vUv;\nvoid main(void) {\nvec2 p = - 1.0 + 2.0 * vUv;\nfloat a = time * 40.0;\nfloat d, e, f, g = 1.0 / 40.0 ,h ,i ,r ,q;\ne = 400.0 * ( p.x * 0.5 + 0.5 );\nf = 400.0 * ( p.y * 0.5 + 0.5 );\ni = 200.0 + sin( e * g + a / 150.0 ) * 20.0;\nd = 200.0 + cos( f * g / 2.0 ) * 18.0 + cos( e * g ) * 7.0;\nr = sqrt( pow( abs( i - e ), 2.0 ) + pow( abs( d - f ), 2.0 ) );\nq = f / r;\ne = ( r * cos( q ) ) - a / 2.0;\nf = ( r * sin( q ) ) - a / 2.0;\nd = sin( e * g ) * 176.0 + sin( e * g ) * 164.0 + r;\ni = cos( h + r * p.x / 1.3 ) * ( e + e + a ) + cos( q * g * 6.0 ) * ( r + h / 3.0 );\nh = sin( f * g ) * 144.0 - sin( e * g ) * 212.0 * p.x;\nh = ( h + ( f - e ) * q + sin( r - ( a + h ) / 7.0 ) * 10.0 + i / 4.0 ) * g;\ni += cos( h * 2.3 * sin( a / 350.0 - q ) ) * 184.0 * sin( q - ( r * 4.3 + a / 12.0 ) * g ) + tan( r * g + h ) * 184.0 * cos( r * g + h );\ni = mod( i / 5.6, 256.0 ) / 64.0;\nif ( i < 0.0 ) i += 4.0;\nif ( i >= 2.0 ) i = 4.0 - i;\nd = r / 350.0;\nd += sin( d * d * 8.0 ) * 0.52;\nf = ( sin( a * g ) + 1.0 ) / 2.0;\ngl_FragColor = vec4( vec3( f * i / 1.6, i / 2.0 + d / 13.0, i ) * d * p.x + vec3( i / 1.3 + d / 8.0, i / 2.0 + d / 18.0, i ) * d * ( 1.0 - p.x ), 1.0 );\n}",
+"vertex": "varying vec2 vUv;\nvoid main()\n{\nvUv = uv;\nvec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );\ngl_Position = projectionMatrix * mvPosition;\n}",
+"uniforms": "{\"time\":{\"value\":1}}",
+"uniformScript": "this.children[i].material.uniforms.time.value += delta;\n",
+"uniformScriptText": "this.children[0].material[0].uniforms.time.value += delta * 2.0;\nthis.children[0].material[1].uniforms.time.value += delta * 2.0;\n",
+"uniformScriptBackground": "this.background.backgroundObject.uniforms.time.value += delta;\n"
+}

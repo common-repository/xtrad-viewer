@@ -1,0 +1,10 @@
+looprepetitions = 0
+loop = true
+looppingpong = true
+start time = -1
+duration = 10
+position start: 0 0 -100
+position time = 5: z = 0
+position time = 10: z = 100
+
+

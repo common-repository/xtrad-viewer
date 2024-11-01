@@ -1,0 +1,9 @@
+duration = 10
+start time = -1
+rotation start: 0 0 180
+rotation time = 2.5: x = 0 z = 270
+rotation time = 5: x = 0 z = 0
+rotation time = 7.5: x = 0 z = 90
+rotation time = 10: x = 0 z = 180
+
+

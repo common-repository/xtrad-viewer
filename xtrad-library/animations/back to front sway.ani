@@ -1,0 +1,8 @@
+duration = 10
+start time = -1
+position start: 0 0 -100
+position time = 3: x = -50 z = -40
+position time = 6: x = 50 z = 40
+position time = 10: x = 0 z = 100
+
+
